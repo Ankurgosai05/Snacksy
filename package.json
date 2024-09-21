@@ -2,6 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "dev": "node backend/index.ts",
     "stripe": "stripe listen --forward-to localhost:5000/api/v1/order/webhook",
