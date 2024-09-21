@@ -1,14 +1,15 @@
 {
   "name": "backend",
   "version": "1.0.0",
+ 
   "main": "index.ts",
 
  
  "scripts": {
-  "dev": "nodemon backend/index.ts",
+  "dev": " npx nodemon backend/index.ts",
   "stripe": "stripe listen --forward-to localhost:5000/api/v1/order/webhook",
   "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-  "start": "nodemon backend/index.ts"
+  "start": "npx nodemon backend/index.ts"
 },
 
 
