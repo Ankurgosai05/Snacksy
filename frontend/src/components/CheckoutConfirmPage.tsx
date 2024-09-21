@@ -49,6 +49,7 @@ const CheckoutConfirmPage = ({ open,setOpen, }: {open: boolean;setOpen: Dispatch
             restaurantId: restaurant?._id as string,
           };
           await createCheckoutSession(checkoutData);
+          console.log(checkoutData)
         } catch (error) {
           console.log(error);
         }
