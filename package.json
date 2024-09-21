@@ -11,7 +11,7 @@
   "stripe": "stripe listen --forward-to localhost:5000/api/v1/order/webhook",
   "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
 
-  "start": "nodemon dist/backend/index.ts"
+  "start": "nodemon /backend/index.ts"
 },
 
 
