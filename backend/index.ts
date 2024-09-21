@@ -15,8 +15,8 @@ dotenv.config({})
 const app = express()
 const PORT = process.env.PORT || 8000
 
-
 const DIRNAME = path.resolve();
+
 
 // Default middleware for any MERN project
 app.use(bodyParser.json({ limit: '10mb' }))
@@ -41,6 +41,8 @@ app.use(express.static(path.join(DIRNAME,"/frontend/dist")));
 app.use("*",(_,res) => {
     res.sendFile(path.resolve(DIRNAME, "frontend","dist","index.html"));
 });
+
+
 // Start server
 app.listen(PORT, () => {
   connectDb()
