@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "dev": "nodemon --exec ts-node  backend/index.ts",
-    "stripe": "stripe listen --forward-to localhost:5000/api/v1/order/webhook",
+    "dev": "nodemon --exec ts-node backend/index.ts",
+   "stripe": "stripe listen --forward-to localhost:5000/api/v1/order/webhook",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "ts-node backend/index.ts"
+    "start": "node --loader ts-node/esm backend/index.ts"
+
+
   },
   "keywords": [],
   "author": "",
